@@ -6,8 +6,105 @@
     <description>Recent content on 闻涛思辑</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 18 Aug 2016 19:33:53 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 25 Aug 2016 16:22:24 +0800</lastBuildDate>
     <atom:link href="https://raxxor.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>robotframework 在mac os上的搭建</title>
+      <link>https://raxxor.github.io/post/robot_install_mac/</link>
+      <pubDate>Thu, 25 Aug 2016 16:22:24 +0800</pubDate>
+      
+      <guid>https://raxxor.github.io/post/robot_install_mac/</guid>
+      <description>
+
+&lt;h2 id=&#34;robotframework是什么&#34;&gt;robotframework是什么?&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://robotframework.org/&#34;&gt;robot framework&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mac下如何安装robotframework&#34;&gt;mac下如何安装robotframework&lt;/h2&gt;
+
+&lt;p&gt;简洁的一句指令
+&amp;gt; pip install robotframework&lt;/p&gt;
+
+&lt;p&gt;什么？你居然没有安装pip？那好吧，&lt;a href=&#34;https://pip.pypa.io/en/stable/installing/&#34;&gt;如何安装pip&lt;/a&gt;拿走不谢。请注意pip支持的python的版本。安装过程其实是下载一个python脚本，然后直接运行该脚本。&lt;/p&gt;
+
+&lt;p&gt;安装好了，如何使用呢？
+robot framework提供了主流&lt;a href=&#34;http://robotframework.org/#tools&#34;&gt;编辑器的支持&lt;/a&gt;，包括了atoms，sublime text，Eclipse，vim， emacs，Texemate甚至notepad++等。大家如果有习惯的编辑器可以直接安装相关的语法插件。&lt;/p&gt;
+
+&lt;p&gt;下面介绍的是robot framework嫡系的编辑器&lt;a href=&#34;https://github.com/robotframework/RIDE/wiki&#34;&gt;ride&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;安装robotframework-ride&#34;&gt;安装robotframework ride&lt;/h3&gt;
+
+&lt;p&gt;安装robot framework ride(以下简称ride)的需要已经安装好以下三部分
+1. Python
+2. wxPython
+3. Robotframework
+Mac自带了python，条件1已经满足。
+&lt;a href=&#34;https://wxpython.org/&#34;&gt;wxPython&lt;/a&gt;是一个基于python的跨平台GUI组件。大家应该猜到了，ride的开发基于wxPython。&lt;/p&gt;
+
+&lt;h4 id=&#34;安装wxpython&#34;&gt;安装wxpython&lt;/h4&gt;
+
+&lt;p&gt;安装的方法有很多，这里推荐简洁的一种
+&amp;gt; brew install wxpython&lt;/p&gt;
+
+&lt;p&gt;什么？你也没有brew&amp;hellip;，那好吧，只需要把以下代码复制并在命令行下运行即可享受brew
+&amp;gt; /usr/bin/ruby -e &amp;ldquo;$(curl -fsSL &lt;a href=&#34;https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;&#34;&gt;https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;&lt;/a&gt;
+&amp;gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;安装ride&#34;&gt;安装ride&lt;/h4&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;pip install robotframework-ride&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;安装完毕后尝试运行 /usr/local/bin/ride.py
+&amp;gt; python ride.py&lt;/p&gt;
+
+&lt;p&gt;WTF,&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;wxPython not found.
+You need to install wxPython 2.8.12.1 with unicode support to run RIDE.
+wxPython 2.8.12.1 can be downloaded from &lt;a href=&#34;http://sourceforge.net/projects/wxpython/files/wxPython/2.8.12.1/&#34;&gt;http://sourceforge.net/projects/wxpython/files/wxPython/2.8.12.1/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;原来是Ride支持2.8的wxPython, 而brew install的是最新的3.0。&lt;/p&gt;
+
+&lt;h4 id=&#34;更改wxpython的设置&#34;&gt;更改wxpython的设置&lt;/h4&gt;
+
+&lt;p&gt;找到robotide 的python egg然后修改一下__init__.py文件。在我的mac上，它处于
+&amp;gt; ➜  robotide pwd
+&amp;gt; /Library/Python/2.7/site-packages/robotide&lt;/p&gt;
+
+&lt;p&gt;加上一行支持的代码&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;try:
+import wxversion
+from wxversion import VersionError
+if sys.platform == &amp;lsquo;darwin&amp;rsquo;: # CAN NOT IMPORT IS_MAC AS THERE IS A wx IMPORT
+supported_versions.append(&amp;ldquo;2.9&amp;rdquo;)
+&lt;em&gt;supported_versions.append(&amp;ldquo;3.0&amp;rdquo;)&lt;/em&gt;
+wxversion.select(supported_versions)
+import wx&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;保存后退出，ride任您驱使&lt;/p&gt;
+
+&lt;p&gt;如果后续使用还发现问题，清空掉 ~/.robotframwork 目录然后重新启动&lt;/p&gt;
+
+&lt;h3 id=&#34;sublime-text配置支持robotframework&#34;&gt;sublime text配置支持robotframework&lt;/h3&gt;
+
+&lt;p&gt;robotframework的插件目前只支持sublime text3.0了，这也是把我从2.0踢向3.0的最后一脚了&amp;hellip;
+关于为什么要转向3.0，后续会出文细说。
+在3.0下面，直接cmd+shift+p唤出包管理器，选择install package，搜robot, 出来的唯一插件就是Robot Framework Assistant, 确认后直接安装好。
+有关sublime text的使用以及包管理器，插件安装，后续会撰文一并细说。&lt;/p&gt;
+
+&lt;h2 id=&#34;结束&#34;&gt;结束&lt;/h2&gt;
+
+&lt;p&gt;OK了，robot framework在mac上的基本安装到这里就结束了。关于如何使用robot，请关注后续文章。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>first</title>

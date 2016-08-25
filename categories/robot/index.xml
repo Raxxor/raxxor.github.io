@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 闻涛思辑</title>
-    <link>https://raxxor.github.io/post/</link>
-    <description>Recent content in Posts on 闻涛思辑</description>
+    <title>Robot on 闻涛思辑</title>
+    <link>https://raxxor.github.io/categories/robot/</link>
+    <description>Recent content in Robot on 闻涛思辑</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 25 Aug 2016 16:22:24 +0800</lastBuildDate>
-    <atom:link href="https://raxxor.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://raxxor.github.io/categories/robot/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>robotframework 在mac os上的搭建</title>
@@ -104,15 +104,6 @@ import wx&lt;/p&gt;
 
 &lt;p&gt;OK了，robot framework在mac上的基本安装到这里就结束了。关于如何使用robot，请关注后续文章。&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>first</title>
-      <link>https://raxxor.github.io/post/first/</link>
-      <pubDate>Thu, 18 Aug 2016 19:33:53 +0800</pubDate>
-      
-      <guid>https://raxxor.github.io/post/first/</guid>
-      <description></description>
     </item>
     
   </channel>
