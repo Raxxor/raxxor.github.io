@@ -6,8 +6,46 @@
     <description>Recent content on 闻涛思辑</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 25 Aug 2016 16:22:24 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 09 Sep 2016 20:06:46 +0800</lastBuildDate>
     <atom:link href="https://raxxor.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ROBOTFRAMEWORK 测试环境搭建</title>
+      <link>https://raxxor.github.io/post/setup_robot_env/</link>
+      <pubDate>Fri, 09 Sep 2016 20:06:46 +0800</pubDate>
+      
+      <guid>https://raxxor.github.io/post/setup_robot_env/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;ROBOTFRAMEWORK&lt;/strong&gt; 是一个流行的自动化测试框架。&lt;/p&gt;
+
+&lt;h2 id=&#34;安装python&#34;&gt;安装Python&lt;/h2&gt;
+
+&lt;p&gt;建议安装基于python2.7的&lt;a href=&#34;https://www.continuum.io/downloads&#34;&gt;anaconda&lt;/a&gt;.
+Anaconda是一个python的商业发型版本，包含了主流的一些库与工具。&lt;/p&gt;
+
+&lt;h2 id=&#34;安装pip&#34;&gt;安装pip&lt;/h2&gt;
+
+&lt;p&gt;在终端/命令行下面输入pip，按下回车，如果提示无法识别的命令。请安装&lt;a href=&#34;https://pip.pypa.io/en/stable/installing/&#34;&gt;pip&lt;/a&gt;.
+PIP是一个安装python库的流行工具。借助于他，我们安装其他库会快捷很多。&lt;/p&gt;
+
+&lt;h2 id=&#34;安装robotframework&#34;&gt;安装ROBOTFRAMEWORK&lt;/h2&gt;
+
+&lt;p&gt;安装好PIP之后，
+&amp;gt; pip install robotframework
+即可安装好robotframework&lt;/p&gt;
+
+&lt;h2 id=&#34;其他工具&#34;&gt;其他工具&lt;/h2&gt;
+
+&lt;p&gt;如果需要安装robot framework 的 其他工具，可以参考&lt;a href=&#34;http://robotframework.org/#tools&#34;&gt;官方文档&lt;/a&gt;
+如果需要在win下安装ride，请参考&lt;a href=&#34;https://pypi.python.org/pypi/robotframework-ride&#34;&gt;这里&lt;/a&gt;
+如果需要在mac下安装ride，请参考&lt;a href=&#34;https://raxxor.github.io/post/robot_install_mac/&#34;&gt;robotframework 在mac os上的搭建&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;其他工具建议&#34;&gt;其他工具建议&lt;/h2&gt;
+
+&lt;p&gt;如果不习惯使用ride来编辑，建议sublime text3，ATOM，notepad/+/+, UE等工具。关于相关编辑器的robot插件，可以在&lt;a href=&#34;http://robotframework.org/#tools-editors&#34;&gt;这里&lt;/a&gt;找到。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>robotframework 在mac os上的搭建</title>
