@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test on Jac.Party</title>
-    <link>https://raxxor.github.io/categories/test/</link>
+    <link>https://jac.party/categories/test/</link>
     <description>Recent content in Test on Jac.Party</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 09 Sep 2016 20:06:46 +0800</lastBuildDate>
-    <atom:link href="https://raxxor.github.io/categories/test/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jac.party/categories/test/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ROBOTFRAMEWORK 测试环境搭建</title>
-      <link>https://raxxor.github.io/post/setup_robot_env/</link>
+      <link>https://jac.party/post/setup_robot_env/</link>
       <pubDate>Fri, 09 Sep 2016 20:06:46 +0800</pubDate>
       
-      <guid>https://raxxor.github.io/post/setup_robot_env/</guid>
+      <guid>https://jac.party/post/setup_robot_env/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;ROBOTFRAMEWORK&lt;/strong&gt; 是一个流行的自动化测试框架。&lt;/p&gt;
@@ -49,10 +49,10 @@ PIP是一个安装python库的流行工具。借助于他，我们安装其他�
     
     <item>
       <title>robotframework 在mac os上的搭建</title>
-      <link>https://raxxor.github.io/post/robot_install_mac/</link>
+      <link>https://jac.party/post/robot_install_mac/</link>
       <pubDate>Thu, 25 Aug 2016 16:22:24 +0800</pubDate>
       
-      <guid>https://raxxor.github.io/post/robot_install_mac/</guid>
+      <guid>https://jac.party/post/robot_install_mac/</guid>
       <description>
 
 &lt;h2 id=&#34;robotframework是什么&#34;&gt;robotframework是什么?&lt;/h2&gt;
